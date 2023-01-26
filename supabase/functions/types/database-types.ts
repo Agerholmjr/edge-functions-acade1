@@ -171,5 +171,46 @@ export interface Database {
     Enums: {
       [_ in never]: never;
     };
+    fitnessprofile: {
+      Row: {
+        age: number
+        gender: string
+        height: number
+        id: string
+        username: string
+        weight: number
+      }
+      Insert: {
+        age: number
+        gender: string
+        height: number
+        id?: string
+        username: string
+        weight: number
+      }
+      Update: {
+        age?: number
+        gender?: string
+        height?: number
+        id?: string
+        username?: string
+        weight?: number
+      }
+    }
+    fitnessprofile_role_junction: {
+      Row: {
+        profile_fk: string
+        role_fk: string
+      }
+      Insert: {
+        profile_fk: string
+        role_fk: string
+      }
+      Update: {
+        profile_fk?: string
+        role_fk?: string
+      }
+    }
+
   };
 }
